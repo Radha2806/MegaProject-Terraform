@@ -1,8 +1,11 @@
 pipeline {
     agent any
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> ec722ae (Add actual project files)
     
     tools {
         maven 'maven3'
@@ -12,13 +15,17 @@ pipeline {
         SCANNER_HOME = tool 'sonar-scanner'
         IMAGE_TAG = "v${BUILD_NUMBER}"
     }
+<<<<<<< HEAD
 =======
 >>>>>>> b8ade81 (Initial commit)
 >>>>>>> 55a34ea (Initial commit)
+=======
+>>>>>>> ec722ae (Add actual project files)
 
     stages {
         stage('Git Checkout') {
             steps {
+<<<<<<< HEAD
 <<<<<<< HEAD
                 git branch: 'main', credentialsId: 'git', url: 'https://github.com/jaiswaladi246/Mega-Project-CD.git'
 =======
@@ -32,6 +39,14 @@ pipeline {
             steps {
 <<<<<<< HEAD
 =======
+=======
+                git branch: 'main', credentialsId: 'git', url: 'https://github.com/jaiswaladi246/Mega-Project-CI.git'
+            }
+        }
+        
+        stage('Compile') {
+            steps {
+>>>>>>> ec722ae (Add actual project files)
                 sh "mvn compile"
             }
         }
@@ -136,6 +151,7 @@ pipeline {
                             git push origin main
                         '''
                     }
+<<<<<<< HEAD
 =======
                 git branch: 'main', credentialsId: 'git', url: 'https://github.com/jaiswaladi246/Mega-Project-CD.git'
             }
@@ -154,13 +170,18 @@ pipeline {
 =======
 >>>>>>> b8ade81 (Initial commit)
 >>>>>>> 55a34ea (Initial commit)
+=======
+>>>>>>> ec722ae (Add actual project files)
                 }
             }
         }
     }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> ec722ae (Add actual project files)
     
     
 post {
@@ -197,7 +218,10 @@ post {
         }
     }
 }
+<<<<<<< HEAD
 =======
 >>>>>>> b8ade81 (Initial commit)
 >>>>>>> 55a34ea (Initial commit)
+=======
+>>>>>>> ec722ae (Add actual project files)
 }
